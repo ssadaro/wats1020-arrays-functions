@@ -21,3 +21,17 @@ var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
+function truncateWords (longText, numWords){
+var longTextArray = longText.split (' ');
+console.log(longTextArray); 
+var arrayLength = longTextArray.length;
+console.log(arrayLength); 
+var cutText = arrayLength - numWords;
+console.log(cutText);
+longTextArray.splice(numWords, cutText, '...' );
+console.log(longTextArray);
+var newText = longTextArray.join(' ');
+console.log(newText);
+return newText;  
+}
+  
